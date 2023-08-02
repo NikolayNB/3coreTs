@@ -1,12 +1,11 @@
 class User {
 
-    email: string;
-    name: string;
     readonly city: string = "Berlin";
-
-    constructor(email: string, name: string){
-        this.email = email;
-        this.name = name;
+    constructor(
+        public email: string, 
+        public name: string,
+        //private userId: string
+        ){
     }
 };
 

@@ -1,9 +1,9 @@
 "use strict";
 class User {
     constructor(email, name) {
-        this.city = "Berlin";
         this.email = email;
         this.name = name;
+        this.city = "Berlin";
     }
 }
 ;
