@@ -4,6 +4,7 @@ class User {
         this.email = email;
         this.name = name;
         this._courseCount = 1;
+        //private _courseCount = 1;
         this.city = "Berlin";
     }
     get AppleEmail() {
@@ -17,6 +18,17 @@ class User {
             throw new Error('Invalid course count');
         }
         this._courseCount = courseNum;
+    }
+}
+;
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    chageCourseCount() {
+        //this._courseCount = 2; <- Error: Property '_courseCount' is private and only accessible within class 'User'.
+        this._courseCount = 2; //<- Property '_courseCount' is protected and only accessible within class 'User' and its subclasses.
     }
 }
 ;

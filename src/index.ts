@@ -1,6 +1,8 @@
 class User {
 
-    private _courseCount = 1;
+    protected _courseCount = 1;
+    //private _courseCount = 1;
+
 
     readonly city: string = "Berlin";
     constructor(
@@ -24,6 +26,14 @@ class User {
             throw new Error('Invalid course count')
         }
         this._courseCount = courseNum;
+    }
+};
+
+class SubUser extends User{
+    isFamily: boolean = true;
+    chageCourseCount(){
+        //this._courseCount = 2; <- Error: Property '_courseCount' is private and only accessible within class 'User'.
+        this._courseCount = 2; //<- Property '_courseCount' is protected and only accessible within class 'User' and its subclasses.
     }
 };
 
