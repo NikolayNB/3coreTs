@@ -1,4 +1,4 @@
-interface TakePhoto {
+/* interface TakePhoto {
     cameraModel: string;
     filter: string;
     burst: number;
@@ -27,4 +27,4 @@ class Youtube implements TakePhoto, Story{
     creatStory(): void{
         console.log("story created")
     }
-}
+} */
