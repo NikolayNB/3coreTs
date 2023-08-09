@@ -21,4 +21,4 @@ class Instagram extends TakePhoto{
     }
 }
 
-const nikolay = new Instagram('normal', 'black and white');
+const nikolay = new Instagram('normal', 'black and white', 3);
