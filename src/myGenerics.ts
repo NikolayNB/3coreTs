@@ -25,3 +25,16 @@ interface Bootle{
 }
 
 identityFour<Bootle>({brand: 'Coca-Cola', type: 1});
+
+
+function getSearchProducts<T>(products: T[]): T{
+    //some API call
+    const myIndex = 3;
+    return products[myIndex];
+}
+
+const getMoreSearchProducts = <T>(products: T[]): T => {
+    //some API call
+    const myIndex = 4;
+    return products[myIndex];
+};
